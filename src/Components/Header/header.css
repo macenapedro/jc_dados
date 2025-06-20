@@ -1,8 +1,8 @@
 header{
     display: flex;
-    justify-content: space-around;
+    gap: 10%;
+    justify-content: center;
     background-color: white;
-    margin: 1% 0;
 }
 
 .DivOptions{
@@ -17,5 +17,4 @@ header{
 
 .imgs{
     width: 100%;
-    padding-left: 10%;
 }

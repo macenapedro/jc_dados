@@ -3,21 +3,26 @@ import Clients from './Components/Clients';
 import Header from "./Components/Header";
 import Clientes from "./Components/Clients";
 import React, {useEffect} from 'react';
-import {BrowserRouter as Router, Routes, Route, BrowserRouter} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, BrowserRouter, useLocation} from 'react-router-dom';
 import Sellers from './Components/Sellers';
 
-const novoTitulo = "Vendedores";
+function NovoTitulo({novoTitulo}){
+    const location = useLocation();
 
-
-
-
+    useEffect(() =>{
+        if(location.pathname === "/"){
+            document.title = "JC Dados";
+        }
+    },
+    [location, novoTitulo]);
+    return null;
+}
 function App() {
-    useEffect(() => {
-    document.title = novoTitulo;
-}, [])
+
     return(
         <main>
             <Router>
+                <NovoTitulo novoTitulo="JC Dados" />
                 <Header />
                 <Routes>
                     <Route path='clientes' element={<Clientes/>} /> 
