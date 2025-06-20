@@ -1,0 +1,21 @@
+header{
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    margin: 1% 0;
+}
+
+.DivOptions{
+    display: flex;
+    padding-top: 1%;
+}
+
+.lnk{
+    padding: 0;
+    width: 10%;
+}
+
+.imgs{
+    width: 100%;
+    padding-left: 10%;
+}
